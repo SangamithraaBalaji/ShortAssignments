@@ -1,11 +1,15 @@
 package Com.Ericsson.RomanNumber;
 
+import java.util.HashMap;
 import java.util.Scanner;
 
 public class ConvertToRoman {
 
-    String converter(final int i) {
-        return "";
+    private static HashMap<Integer, String> map = new HashMap<Integer, String>();
+
+    public String converter(final int i) {
+        map.put(1, "I");
+        return map.get(i);
     }
 
     public static void main(final String[] args) {
