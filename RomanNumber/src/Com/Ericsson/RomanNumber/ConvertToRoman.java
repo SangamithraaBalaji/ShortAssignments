@@ -44,6 +44,7 @@ public class ConvertToRoman {
 
         try {
             final Scanner sc = new Scanner(System.in);
+            System.out.println("Enter a number to convert: ");
             final int i = sc.nextInt();
             System.out.println(n.converter(i));
         } catch (final Exception e) {
