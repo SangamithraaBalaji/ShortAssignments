@@ -24,4 +24,27 @@ class ConvertToRomanTest {
         assertEquals("X", objUnderTest.converter(10));
     }
 
+    @Test
+    void convertFiftyReturnsL() {
+        final ConvertToRoman objUnderTest = new ConvertToRoman();
+        assertEquals("L", objUnderTest.converter(50));
+    }
+
+    @Test
+    void convertHundredReturnsC() {
+        final ConvertToRoman objUnderTest = new ConvertToRoman();
+        assertEquals("C", objUnderTest.converter(100));
+    }
+
+    @Test
+    void convertFiveHundredReturnsD() {
+        final ConvertToRoman objUnderTest = new ConvertToRoman();
+        assertEquals("D", objUnderTest.converter(500));
+    }
+
+    @Test
+    void convertThousandReturnsM() {
+        final ConvertToRoman objUnderTest = new ConvertToRoman();
+        assertEquals("M", objUnderTest.converter(1000));
+    }
 }
