@@ -49,7 +49,7 @@ class ConvertToRomanTest {
     }
 
     @Test
-    void convertZeroReturnsNull() {
+    void convertZeroReturnsNothing() {
         final ConvertToRoman objUnderTest = new ConvertToRoman();
         assertEquals("", objUnderTest.converter(0));
     }
@@ -59,4 +59,11 @@ class ConvertToRomanTest {
         final ConvertToRoman objUnderTest = new ConvertToRoman();
         assertEquals("II", objUnderTest.converter(2));
     }
+
+    @Test
+    void convertNegativeReturnsNothing() {
+        final ConvertToRoman objUnderTest = new ConvertToRoman();
+        assertEquals("", objUnderTest.converter(-1));
+    }
+
 }
