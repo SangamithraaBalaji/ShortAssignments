@@ -12,4 +12,9 @@ class ConvertToRomanTest {
         assertEquals("I", objUnderTest.converter(1));
     }
 
+    @Test
+    void convertFiveReturnsV() {
+        final ConvertToRoman objUnderTest = new ConvertToRoman();
+        assertEquals("V", objUnderTest.converter(5));
+    }
 }
