@@ -20,13 +20,18 @@ public class ConvertToRoman {
 
         String result = new String();
 
-        for (final int i : bases) {
-            while (num >= i) {
-                result += map.get(i);
-                num -= i;
+        if (num <= 0) {
+            return "Invalid Input";
+        } else {
+            for (final int i : bases) {
+                while (num >= i) {
+                    result += map.get(i);
+                    num -= i;
+                }
             }
+            return result;
         }
-        return result;
+
     }
 
     public static void main(final String[] args) {
