@@ -9,6 +9,7 @@ public class ConvertToRoman {
 
     public String converter(final int i) {
         map.put(1, "I");
+        map.put(5, "V");
         return map.get(i);
     }
 
