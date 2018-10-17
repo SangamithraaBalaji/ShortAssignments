@@ -36,9 +36,14 @@ public class ConvertToRoman {
 
     public static void main(final String[] args) {
         final ConvertToRoman n = new ConvertToRoman();
-        final Scanner sc = new Scanner(System.in);
-        final int i = sc.nextInt();
-        System.out.println(n.converter(i));
+
+        try {
+            final Scanner sc = new Scanner(System.in);
+            final int i = sc.nextInt();
+            System.out.println(n.converter(i));
+        } catch (final Exception e) {
+            System.out.println(e);
+        }
 
     }
 

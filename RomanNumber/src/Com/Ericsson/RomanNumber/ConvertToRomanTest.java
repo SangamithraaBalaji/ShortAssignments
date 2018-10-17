@@ -66,4 +66,10 @@ class ConvertToRomanTest {
         assertEquals("Invalid Input", objUnderTest.converter(-1));
     }
 
+    @Test
+    void convertFourReturnsIV() {
+        final ConvertToRoman objUnderTest = new ConvertToRoman();
+        assertEquals("IV", objUnderTest.converter(4));
+    }
+
 }
