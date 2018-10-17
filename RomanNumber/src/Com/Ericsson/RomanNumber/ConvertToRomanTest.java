@@ -47,4 +47,16 @@ class ConvertToRomanTest {
         final ConvertToRoman objUnderTest = new ConvertToRoman();
         assertEquals("M", objUnderTest.converter(1000));
     }
+
+    @Test
+    void convertZeroReturnsNull() {
+        final ConvertToRoman objUnderTest = new ConvertToRoman();
+        assertEquals(null, objUnderTest.converter(0));
+    }
+
+    @Test
+    void convertTwoReturnsII() {
+        final ConvertToRoman objUnderTest = new ConvertToRoman();
+        assertEquals("II", objUnderTest.converter(2));
+    }
 }
