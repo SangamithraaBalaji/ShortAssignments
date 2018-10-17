@@ -17,4 +17,11 @@ class ConvertToRomanTest {
         final ConvertToRoman objUnderTest = new ConvertToRoman();
         assertEquals("V", objUnderTest.converter(5));
     }
+
+    @Test
+    void convertTenReturnsX() {
+        final ConvertToRoman objUnderTest = new ConvertToRoman();
+        assertEquals("X", objUnderTest.converter(10));
+    }
+
 }
