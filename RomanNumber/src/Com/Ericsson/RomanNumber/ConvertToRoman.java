@@ -6,8 +6,9 @@ import java.util.Scanner;
 public class ConvertToRoman {
 
     private static HashMap<Integer, String> map = new HashMap<Integer, String>();
+    private static int[] bases = { 1000, 900, 500, 400, 100, 90, 50, 40, 10, 9, 5, 4, 1 };
 
-    public String converter(final int i) {
+    public String converter(int num) {
         map.put(1, "I");
         map.put(5, "V");
         map.put(10, "X");
@@ -16,7 +17,16 @@ public class ConvertToRoman {
         map.put(100, "C");
         map.put(500, "D");
         map.put(1000, "M");
-        return map.get(i);
+
+        String result = new String();
+
+        for (final int i : bases) {
+            while (num >= i) {
+                result += map.get(i);
+                num -= i;
+            }
+        }
+        return result;
     }
 
     public static void main(final String[] args) {

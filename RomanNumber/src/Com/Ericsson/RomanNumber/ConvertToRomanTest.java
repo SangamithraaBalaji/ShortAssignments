@@ -51,7 +51,7 @@ class ConvertToRomanTest {
     @Test
     void convertZeroReturnsNull() {
         final ConvertToRoman objUnderTest = new ConvertToRoman();
-        assertEquals(null, objUnderTest.converter(0));
+        assertEquals("", objUnderTest.converter(0));
     }
 
     @Test
