@@ -26,7 +26,7 @@ public class ConvertToRoman {
         String result = new String();
 
         if (num <= 0) {
-            return "Invalid Input";
+            return "Invalid Input. Enter number greater than 0";
         } else {
             for (final int i : bases) {
                 while (num >= i) {
@@ -47,7 +47,7 @@ public class ConvertToRoman {
             final int i = sc.nextInt();
             System.out.println(n.converter(i));
         } catch (final Exception e) {
-            System.out.println(e);
+            System.out.println("Invalid Input. Only numbers allowed");
         }
 
     }

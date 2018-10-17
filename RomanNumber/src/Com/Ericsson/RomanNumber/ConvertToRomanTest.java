@@ -51,7 +51,7 @@ class ConvertToRomanTest {
     @Test
     void convertZeroReturnsInvalidInput() {
         final ConvertToRoman objUnderTest = new ConvertToRoman();
-        assertEquals("Invalid Input", objUnderTest.converter(0));
+        assertEquals("Invalid Input. Enter number greater than 0", objUnderTest.converter(0));
     }
 
     @Test
@@ -63,13 +63,19 @@ class ConvertToRomanTest {
     @Test
     void convertNegativeReturnsInvalidInput() {
         final ConvertToRoman objUnderTest = new ConvertToRoman();
-        assertEquals("Invalid Input", objUnderTest.converter(-1));
+        assertEquals("Invalid Input. Enter number greater than 0", objUnderTest.converter(-1));
     }
 
     @Test
     void convertFourReturnsIV() {
         final ConvertToRoman objUnderTest = new ConvertToRoman();
         assertEquals("IV", objUnderTest.converter(4));
+    }
+
+    @Test
+    void convertNinenteenReturnsXIX() {
+        final ConvertToRoman objUnderTest = new ConvertToRoman();
+        assertEquals("XIX", objUnderTest.converter(19));
     }
 
 }
